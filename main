@@ -11,7 +11,7 @@ def print_label():
     LABEL = f"""
     ^XA
 
-    ^TL{offset}
+    ^LT{offset}
     ^FX----BIS upper subtitle------
     ^FO70,28^AAN,33,19^FDIS 616:2017^FS
 
