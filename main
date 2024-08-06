@@ -5,21 +5,27 @@ WIDTH = 250
 HEIGHT = 150
 
 
+def save_offset_value(offsets_value):
+    with open("offsets.ini", "w") as file:
+        file.write(offsets_value)
+
+
 def load_saved_values():
     try:
         with open("offsets.ini", "r") as file:
-            return file.readlines()
+            return file.read()
     except FileNotFoundError:
-        with open("offsets.ini", "w") as file:
-            file.write("0")
+        save_offset_value(offsets_value="0")
     finally:
         with open("offsets.ini", "r") as file:
-            return file.readlines()
+            return file.read()
+
 
 
 def print_label():
     offset = offset_value.get()
     quantity = quantity_value.get()
+    save_offset_value(offsets_value=offset)
     label = f"""
     ^XA
     ^LT{offset}
