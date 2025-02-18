@@ -4,3 +4,5 @@ From the script, via a graphical interface, it is possible to control the positi
 The script sends the program, written in the predefined zpl code, to the Zebra printer.
 The Zebra printer is a 110Xi4 type 24 dot/mm (600dpi) cutter.
 The label size is 16x11 mm.
+
+label_2.0 - Backward counter added
